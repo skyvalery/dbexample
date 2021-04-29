@@ -25,7 +25,7 @@ public class Main {
 //            System.out.println(res);
             statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user1', 10, 'user1@mail.com');");
             statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user2', 12, 'user12@mail.com');");
-            statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user3', 14, 'user14@mail.com');");
+            statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user3', 21, 'user14@mail.com');");
 
 
         } catch (SQLException e) {
