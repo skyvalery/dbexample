@@ -19,13 +19,21 @@ public class Main {
 
         try(Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             Statement statement = connection.createStatement()) {
-//            statement.execute("INSERT INTO users (name, age, email) values ('Exam', 38, 'exam@email.com');");
+            statement.execute("INSERT INTO users (name, age, email) values ('ExamNew', 51, 'exam51@email.com');");
 //            int res = statement.executeUpdate("UPDATE users SET name = 'NewExam', age = 45 WHERE id=8;");
 //            ResultSet res = statement.executeQuery("SELECT * FROM users;");
 //            System.out.println(res);
+
             statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user1', 10, 'user1@mail.com');");
             statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user2', 12, 'user12@mail.com');");
             statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user3', 21, 'user14@mail.com');");
+
+//            statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user1', 10, 'user1@mail.com');");
+//            statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user2', 12, 'user12@mail.com');");
+//            statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user3', 21, 'user14@mail.com');");
+//            statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user3', 37, 'user14@mail.com');");
+//            statement.addBatch("INSERT INTO users (name, age, email) VALUES ('user3', 97, 'user97@mail.com');");
+
 
         } catch (SQLException e) {
             e.printStackTrace();
